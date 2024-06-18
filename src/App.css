@@ -1,0 +1,422 @@
+.header{
+    background-color: #011638;
+    min-height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: calc(10px + 2vmin);
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px #364156;
+    z-index: 1;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+
+}
+.header a:hover{
+    color: #CDCDCD;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90vh;
+    background-color: #DFF8EB;
+    color: #011638;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+
+}
+
+.home h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.home p{
+    margin: 10px;
+    padding: 10px;
+}
+.home button{
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: larger;
+    background-color: #5A1807;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.home button:hover{
+    background-color: #011638;
+    color: white;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #DFF8EB;
+    color: #011638;
+    font-size: larger;
+    padding: 0 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.login h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.login p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+    background-color: #364156;
+    color: white;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+    border-radius: 10%;
+}
+
+.login form input{
+    margin: 10px;
+    font-size: larger;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.login button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.login button:hover{
+    background-color: #011638;
+    color: white;
+}
+
+.terminZakazivanje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #DFF8EB;
+    color: #011638;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.terminZakazivanje h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.terminZakazivanje p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.terminZakazivanje select{
+    margin: 10px;
+    width: min-content;
+    justify-content: center;
+    font-size: larger;
+    background-color: #011638;
+    color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.terminZakazivanje select:hover{
+    background-color: #364156;
+    color: white;
+}
+
+.terminZakazivanje input{
+    margin: 10px;
+    font-size: larger;
+    background-color: #011638;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.terminZakazivanje input:hover{
+    background-color: #364156;
+    color: white;
+}
+
+.terminZakazivanje button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #011638;
+    color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.terminZakazivanje button:hover{
+    background-color: #364156;
+    color: white;
+}
+
+.mojiTermini{
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #DFF8EB;
+  color: #011638;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.mojiTermini h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.mojiTermini p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.mojiTermini button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.mupovi{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.mup{
+    background-color: #011638;
+    margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 300px;
+  color: white;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+  border-radius: 10%;
+} 
+
+.mup h1{
+  margin: 10px;
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.mup p{
+  margin: 10px;
+  padding: 10px;
+}
+
+.terminiMup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #DFF8EB;
+  color: #011638;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.terminiMup h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.terminiMup p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.terminiMup button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.terminiMup button:hover{
+    background-color: #5A1807;
+    color: white;
+}
+
+.vesti{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #DFF8EB;
+  color: #011638;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.vesti select{
+    margin: 10px;
+    width: min-content;
+    justify-content: center;
+    font-size: larger;
+    background-color: #011638;
+    color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.vesti select:hover{
+    background-color: #364156;
+    color: white;
+}
+.vesti button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #CDCDCD;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.vesti button:hover{
+    background-color: #5A1807;
+    color: white;
+}
+
+.vesti-prikaz{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.vest{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin: 10px;
+  background-color: #011638;
+  color: white;
+  font-size: medium;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+  border-radius: 10%;
+}
+.vest p{
+  margin: 10px;
+  padding: 10px;
+}
+.vest h1{
+  margin: 10px;
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.vest img{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.vesti h1{
+  margin: 10px;
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.vesti p{
+  margin: 10px;
+  padding: 10px;
+}
+
