@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 import axiosConfig from '../../axiosConfig';
 
 function Vesti() {
-    const urlSveVesti = 'https://newsapi.org/v2/everything?q=Government&from=2023-09-15&sortBy=popularity&apiKey=9f37384f35a54e268dd3c9630c8de2ec';
+    const urlSveVesti = 'https://newsapi.org/v2/everything?q=Government&from=2024-06-20&sortBy=popularity&apiKey=9f37384f35a54e268dd3c9630c8de2ec';
     const urlSrbija = 'https://newsapi.org/v2/top-headlines?' +
     'country=rs&' +
     'apiKey=9f37384f35a54e268dd3c9630c8de2ec';

@@ -25,7 +25,7 @@ function Login() {
                     getMup(response.data.mupId);
                     window.location.href = '/terminiMup';
                 }
-                window.location.href = '/';
+                /*window.location.href = '/';*/
             }
             )
             .catch((error) => {
@@ -65,6 +65,8 @@ function Login() {
         function getMup(id){
             axiosConfig.get(`api/mup/${id}`)
             .then((response) => {
+                console.log("MUP")
+                console.log(response)
                 localStorage.setItem('mup',JSON.stringify(response.data));
                 return localStorage.getItem('mup');
             }

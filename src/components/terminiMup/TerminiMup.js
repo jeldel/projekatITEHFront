@@ -4,6 +4,8 @@ import axiosConfig from '../../axiosConfig';
 import StatistikaTerminiMupChart from '../charts/StatistikaTerminiMupChart';
 
 function TerminiMup() {
+    console.log("MUP")
+    console.log(localStorage.getItem('mup'))
     const [korisnik,setKorisnik] = useState(null);
     const korisnik1 = JSON.parse(localStorage.getItem('korisnik'));
     var mup1 = null;
