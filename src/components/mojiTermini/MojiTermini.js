@@ -6,15 +6,18 @@ import axiosConfig from '../../axiosConfig';
 
 function MojiTermini() {
     const [korisnik,setKorisnik] = useState(null);
-    const korisnik1 = JSON.parse(localStorage.getItem('korisnik'));
-    const [termini,setTermini] = useState(korisnik1.termini);
+
+    const [termini,setTermini] = useState([]);
 
     useEffect(() => {
-        setKorisnik(korisnik1);
+        const korisnik1 = JSON.parse(localStorage.getItem('korisnik'));
+        
         if(korisnik1 === null){
             window.location.href = '/login';
         }
         else{
+            setKorisnik(korisnik1);
+            setTermini(korisnik1.termini || []);
         }
     }, [])
 
@@ -38,6 +41,7 @@ function MojiTermini() {
     }
 
     function getTermini(vrednost){
+        const korisnik1 = JSON.parse(localStorage.getItem('korisnik'));
             if(vrednost === 'zakazani'){
                 setTermini(korisnik1.termini.filter(termin => termin.status.status === 'Zakazan'));
             }
@@ -82,7 +86,7 @@ function MojiTermini() {
     }
 
 
- if (korisnik1){
+ if (korisnik){
     return (
         <div className='mojiTermini'> 
             <h1>MojiTermini</h1>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {useState,useEffect} from 'react';
 import axiosConfig from '../../axiosConfig';
 import StatistikaTerminiMupChart from '../charts/StatistikaTerminiMupChart';
@@ -8,16 +8,15 @@ function TerminiMup() {
     console.log(localStorage.getItem('mup'))
     const [korisnik,setKorisnik] = useState(null);
     const korisnik1 = JSON.parse(localStorage.getItem('korisnik'));
-    var mup1 = null;
+    const [mup, setMup] = useState(null);
     useEffect(() => {
         setKorisnik(korisnik1);
         if(korisnik1 === null){
             window.location.href = '/login';
         }
         else{
-            console.log(mup1);
+            getMup(korisnik1.mupId);
         }
-        getMup(korisnik1.mupId);
 
     }, [])
 
@@ -25,7 +24,7 @@ function TerminiMup() {
         axiosConfig.get(`api/mup/${id}`)
         .then((response) => {
             localStorage.setItem('mup',JSON.stringify(response.data));
-            return localStorage.getItem('mup');
+            setMup(response.data);
         }
         )
     }
@@ -60,13 +59,15 @@ function TerminiMup() {
         return `${date2} ${time}`;
     }
 
-        
+    if (!mup) {
+        return <div>Loading...</div>;
+    }
 
 
   return (
     <div className='terminiMup'>
         <h1>Termini</h1>
-        {JSON.parse(localStorage.getItem('mup')).termini.map((termin) => (
+        {mup.termini.map((termin) => (
             <div key={termin.id} className='mup'>
                 <p>Vreme: {parseDateandTime(termin.vreme)}</p>
                 <p>Status: {termin.status.status}</p>
@@ -76,10 +77,10 @@ function TerminiMup() {
             </div>
         ))}
         <h1>Statistika Termina</h1>
-        <p>Broj termina: {JSON.parse(localStorage.getItem('mup')).termini.length}</p>
-        <p>Broj zahteva: {JSON.parse(localStorage.getItem('mup')).termini.filter(termin => termin.status.status === 'Zahtev').length}</p>
-        <p>Broj zakazanih termina: {JSON.parse(localStorage.getItem('mup')).termini.filter(termin => termin.status.status === 'Zakazan').length}</p>
-        <p>Broj odbijenih termina: {JSON.parse(localStorage.getItem('mup')).termini.filter(termin => termin.status.status === 'Odbijen').length}</p>
+        <p>Broj termina: {mup.termini.length}</p>
+        <p>Broj zahteva: {mup.termini.filter(termin => termin.status.status === 'Zahtev').length}</p>
+        <p>Broj zakazanih termina: {mup.termini.filter(termin => termin.status.status === 'Zakazan').length}</p>
+        <p>Broj odbijenih termina: {mup.termini.filter(termin => termin.status.status === 'Odbijen').length}</p>
 
         <StatistikaTerminiMupChart/>
     </div>
