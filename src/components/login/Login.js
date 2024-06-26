@@ -25,7 +25,7 @@ function Login() {
                     getMup(response.data.mupId);
                     window.location.href = '/terminiMup';
                 }
-                /*window.location.href = '/';*/
+                window.location.href = '/';
             }
             )
             .catch((error) => {
