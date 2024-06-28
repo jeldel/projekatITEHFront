@@ -55,12 +55,12 @@ function MojiTermini() {
     }  
 
     function refreshKorisnikTermini(){
-        axiosConfig.get(`api/korisnik/${korisnik1.id}/termini`)
+        axiosConfig.get(`api/korisnik/${korisnik.id}/termini`)
         .then((response) => {
             console.log(response.data);
             setTermini(response.data);
-            korisnik1.termini = response.data;
-            localStorage.setItem('korisnik',JSON.stringify(korisnik1));
+            korisnik.termini = response.data;
+            localStorage.setItem('korisnik',JSON.stringify(korisnik));
         })
     }
 
